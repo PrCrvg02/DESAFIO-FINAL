@@ -10,7 +10,7 @@ justify-content: space-around;
 background-color: rgba(108, 122, 137 /1);
   backdrop-filter: blur(15px);
  position: fixed;
-
+z-index: 1;
 `
 const Divone = styled.div`
 display: flex;
@@ -40,6 +40,17 @@ justify-content: space-evenly;
 li{
     list-style: none;
     font-size: 1.2rem;
+    color: #ffffff;
+    
+
+}li:hover{
+width: 113px;
+height: 36px;
+background: #747474 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #0000005C;
+border-radius: 18px;
+opacity: 1;
+text-align: center;
 
 }
 `

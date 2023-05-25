@@ -1,19 +1,30 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
+import Carousel from 'react-elastic-carousel'
 import axios from "axios";
 import styled from "styled-components";
 
 const SliderBox = styled.section`
-  padding: 1rem;
-  border: 2px white;
+  padding: 2rem;
+  
   display: flex;
+flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: black;
-  color: #f2f2f2;
+  color: #ffffff;
 `;
 
-export default function Carousel() {
+const CaroselTitle = styled.h2`
+display: flex;
+flex-wrap: wrap;
+width: 98%;
+font-size: 2rem;
+color: #ffffff;
+background-color: #000000;
+`
+
+
+export default function CaroselComponet() {
   const [filmes, setFilmes] = useState([]);
 
   const getApi = () => {
@@ -38,7 +49,8 @@ export default function Carousel() {
   };
   return (
     <SliderBox>
-      <Slider {...settings} style={{ width: "95%" }}>
+     <CaroselTitle>Últimos lançamentos</CaroselTitle>
+      <Carousel itemsToShow={4}>
         {filmes.map((item) => (
           <div>
             <img
@@ -48,8 +60,8 @@ export default function Carousel() {
             />
             <h2>{item.title} </h2>
           </div>
-        ))}
-      </Slider>
+        ))} 
+      </Carousel>
     </SliderBox>
   );
 }
