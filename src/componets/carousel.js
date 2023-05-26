@@ -14,7 +14,7 @@ flex-wrap: wrap;
   color: #ffffff;
 `;
 
-const CaroselTitle = styled.h2`
+const CarouselTitle = styled.h2`
 display: flex;
 flex-wrap: wrap;
 width: 98%;
@@ -49,7 +49,7 @@ export default function CaroselComponet() {
   };
   return (
     <SliderBox>
-     <CaroselTitle>Últimos lançamentos</CaroselTitle>
+     <CarouselTitle>Últimos lançamentos</CarouselTitle>
       <Carousel itemsToShow={4}>
         {filmes.map((item) => (
           <div>

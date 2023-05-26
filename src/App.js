@@ -1,6 +1,6 @@
 import Main from "./componets/main";
 import Header from "./componets/header";
-import CaroselComponet from "./componets/carosel";
+import Carousel from "./componets/carousel";
 import Filmes from "./componets/filmes";
 import Footer from "./componets/footer";
 function App() {
@@ -8,7 +8,7 @@ function App() {
 <>
 <Header/>
 <Main/>
-<CaroselComponet/>
+<Carousel/>
 <Filmes/>
 <Footer/>
 </>
